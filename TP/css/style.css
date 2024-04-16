@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {  /*root*/
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.6rem;
+}
+
+img { 
+    max-width: 100%;  
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+/* Fin Menu */
+.centrado {
+    max-width: 1200px;
+    width: 95%; 
+    margin: 0 auto; 
+}
+
+.menu-section {
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #000;
+}
+
+.menu-section #header {
+    background-color: #d6d2d2;
+}
+
+.menu-simple-menu {
+    padding: 0;
+    margin: 0;
+    background-color: #0c0c0c;
+}
+
+.menu-simple-menu ul a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: .6em 1em;
+}
+
+.menu-simple-menu li a:hover {
+    background: #292727;
+}
+/* Fin Menu */
+
+/* Login Account */
+#fieldset #userPass {
+    grid-area: userPass;
+    border:  1px solid #000;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+#fieldset #left {
+    grid-area: left;
+}
+
+#fieldset #rigth {
+    grid-area: rigth;
+}
+
+#fieldset #userPass h1 {
+    text-align: center;
+}
+
+#fieldset #userPass p, #notificaciones  {
+    text-align: left;
+    font-size: 1rem;
+}
+/* Fin Login Account */
+
+/* Footer */
+#Derechos {
+    font-size: 1.5rem;
+    text-align: center;
+    grid-area: Derechos;
+}
+
+#Contacto {
+    font-size: 1.5rem;
+    text-align: center;
+    grid-area: Contacto;
+}
+
+#Contacto p {
+    margin-bottom: 1rem;
+}
+
+#Contacto div {
+    margin-bottom: 1rem;
+}
+
+#Idioma {
+    font-size: 1.5rem;
+    text-align: center;
+    grid-area: Idioma;
+}
+/* Fin Footer */
+
+#Contacto div :hover {
+    color: rgb(20, 20, 20);
+}
+
+@media (min-width: 480px) {
+    /* Menu */
+    .tres-columnas {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+    } 
+
+    .menu-simple-menu ul {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        column-gap: 1rem;
+        list-style-type: none;
+    }
+    /*Fin Menu */
+
+    /* Login Account */
+    #fieldset {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        column-gap: 1rem;
+        grid-template-areas: "left userPass rigth";
+    }
+    /*Fin Login Account */
+
+    /* Footer */
+    footer {
+        background-color: #d6d2d2;
+        color: rgb(0, 0, 0);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+        grid-template-areas: "Derechos Contacto Idioma";
+    }
+    /* Fin Footer */
+}
