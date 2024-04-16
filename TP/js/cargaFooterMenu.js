@@ -21,5 +21,4 @@ function includeFooter()
         })
         .catch(error => console.error("Error fetching footer:", error));
 }
-
 window.onload = includeFooter; // Execute the includeFooter function on page load
